@@ -4,6 +4,17 @@ This tool calculates how many days an invoice is overdue, the interest accrued a
 
 **Live demo:** https://0xelitesystem.github.io/invoice-late-fee-calculator/
 
+## Use
+
+1. Enter the invoice amount and the due date.
+2. Set the As of date you are calculating for.
+3. Add a flat late fee, an annual interest rate, and a grace period if any.
+4. Read days overdue, interest accrued, the fee applied, and the total owed; results update as you type.
+
+## Why this exists
+
+Working out what an overdue invoice now owes means counting days, applying a grace period, and converting an annual rate to daily interest. This tool does that arithmetic in one place. It is one HTML file with inline CSS and JavaScript: no account, no tracking, no analytics, no external scripts or fonts, and it works offline. MIT licensed, so you can fork it, self-host it, or read every line.
+
 ## What it does
 
 Enter the invoice amount, the due date, and the date you are calculating for. Set a flat late fee, an annual interest rate, and a grace period if any. The tool returns days overdue, the interest accrued, the flat fee applied, and the total owed, stamped current or past due.
@@ -22,9 +33,20 @@ This tool performs arithmetic on the numbers you enter. It is not financial, tax
 
 Everything runs in your browser. Nothing you type is sent anywhere, stored, or saved. Closing the tab clears it.
 
-## Use it
+## Run locally
 
 Open `index.html` in any modern browser, or host it as a static page. No build step, no dependencies, no network calls.
+
+```bash
+git clone https://github.com/0xelitesystem/invoice-late-fee-calculator
+cd invoice-late-fee-calculator
+```
+
+Then open `index.html` in any modern browser. Or serve the folder with `python -m http.server 8000` and visit http://localhost:8000.
+
+## Build
+
+No build step. The whole tool is one `index.html` with no dependencies, so there is nothing to install or compile.
 
 ## More
 
